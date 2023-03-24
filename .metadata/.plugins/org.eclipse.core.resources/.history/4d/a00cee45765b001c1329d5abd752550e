@@ -1,0 +1,15 @@
+
+public class user {
+	public class User {
+		   public String name;
+		   private String senha;
+
+		   public String setPassword(String password) {
+		       return this.senha = password;
+		   }
+
+		   public String getPassword() {
+		       return senha;
+		   }
+		}
+}

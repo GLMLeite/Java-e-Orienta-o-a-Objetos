@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.c14n.helper.C14nHelper"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Sistemaentrega"/>
+    <fullyQualifiedTypeName name="Funcionario"/>
+    <fullyQualifiedTypeName name="Entrega"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.ObjectHistogramElement"/>
+    <fullyQualifiedTypeName name="Menus"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.jmx.mbeanserver.Util"/>
+    <fullyQualifiedTypeName name="sun.rmi.server.Util"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.trax.Util"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.util.Util"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="Campus.ICampus"/>
+    <fullyQualifiedTypeName name="Usuario"/>
+    <fullyQualifiedTypeName name="Pessoa"/>
+    <fullyQualifiedTypeName name="Cliente"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+
+public class Cliente{
+	public String nome;
+	public String cpf;
+	public String sobrenome;
+	public String cdgpedido;
+	public String tel, login;
+	public String senha;
+	public char j='s';
+	public ArrayList<Cliente> listaclientes = new ArrayList<>();	
+	
+	public static Scanner leitor = new Scanner (System.in);	
+	
+		
+	public static Logcliente loginc() {
+		Logcliente c1 = new Logcliente();
+		
+	    System.out.println("Informe seu login: ");
+	    c1.login = leitor.nextLine();	
+	    
+	    System.out.println("Informe seu senha: ");
+		c1.senha = leitor.nextLine();	
+		System.out.println("Informe seu cpf: ");
+		c1.cpf = leitor.nextLine();	
+		
+   return c1;
+		
+	}
+	
+	void getcad (ArrayList<String> listacliente) {
+		System.out.println(listacliente);
+	}
+	
+	public String getNomeCompleto(){
+		return nome + " " + sobrenome;
+	}
+	
+	
+	public Cliente cadastro() {	
+	
+	Cliente c1 = new Cliente();		
+	System.out.println("");
+	System.out.println("Informe seu nome: ");
+	c1.nome = leitor.nextLine();		
+    	
+	System.out.println("Informe seu senha: ");
+	c1.senha = leitor.nextLine();
+	
+	listaclientes.add(c1);
+	System.out.println(c1.nome);
+	
+	Menu a = new Menu(); a.menu1();
+	return c1;
+}
+    public Cliente getcliente(String nome) {
+        Cliente user = new Cliente();
+        
+        for(Cliente client : listaclientes) {
+            if(client.nome == nome) {
+                user = client;
+            }
+        }
+	
+}
+	
+

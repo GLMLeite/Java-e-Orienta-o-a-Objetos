@@ -1,0 +1,92 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Administrador{
+	
+	public static Scanner leitor = new Scanner(System.in); 
+	public char escolha;
+	public String user ;
+	public String senhaesp ;
+	public String senhafunc, loginfunc, sac;
+	public String login, senha, cdgprod;
+	
+
+    
+    
+    public String setPassword(String senhaesp) {
+        return this.senhaesp = senhaesp;
+    }
+    
+    public static Administrador cad() {
+        Administrador adm = new Administrador();
+        adm.user = "ADM";
+        adm.senhaesp = "admin123";
+
+        return adm;
+    }
+
+
+	
+	void Admin(){
+	Administrador adm = new Administrador();
+	
+	System.out.println("Informe usuario");
+	adm.login = leitor.nextLine();
+	System.out.println("Digite a senha por favor");
+	adm.senha = leitor.nextLine();
+	
+	if(adm.login.equals(adm.user) && adm.senha.equals(adm.senhaesp)){
+        System.out.printf("Usuário logado com sucesso.\n");
+        Menuadm menu = new Menuadm();
+        menu.menu2();        
+    }else {
+    	System.out.println("Login ou senha inválidos!");
+    }
+	}
+	    
+	public String alteraadmnome(String user) {
+		System.out.println("Digite sua novo user: ");
+    	user = leitor.nextLine();
+    	return user;
+	}
+	
+	public String alteraadmsenha(String senhaesp) {
+    	System.out.println("Digite sua nova senha: ");
+    	senhaesp = leitor.nextLine();
+    	return senhaesp;
+	}
+
+	
+	public void sac() {
+		System.out.println("Informe um número para contato");
+		sac = leitor.nextLine();
+		Menu a = new Menu(); a.menu1();	
+	}
+	
+	public void printsac() {
+		System.out.println(sac);
+	}
+	void dadosfunc() {
+		System.out.println("Informe seu login: ");
+		loginfunc = leitor.nextLine();
+		System.out.println("Informe seu senha: ");
+		senhafunc = leitor.nextLine();
+		
+		Menu a = new Menu(); a.menu1();
+	}
+	
+	void criarcodigo(){
+		System.out.println("Digite o código do produto a ser criado: ");
+		cdgprod= leitor.nextLine();
+		Menu a = new Menu(); a.menu1();
+		
+	}
+	
+	}
+	
+
+
+	
+
+	
+

@@ -1,0 +1,6 @@
+1639325911620	Extract local variable 'getclientenome'
+1639325925765	Extract local variable 'getclientesenha'
+1639332407938	Delete element
+1639430707000	Encapsulate field 'loginfunc'
+1639430731930	Encapsulate field 'senhafunc'
+1639432523845	Delete element

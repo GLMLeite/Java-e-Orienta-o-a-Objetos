@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Menu {
+	
+	
+
+	
+	Scanner leitor = new Scanner (System.in);
+	
+	void menu1() {
+		System.out.println("             MENU!     ");
+		System.out.println("      ---------------------");
+		System.out.println("      ---------------------");
+		System.out.println("      1- Cliente      ");
+		System.out.println("      2- Funcionário      ");
+		System.out.println("      3- ADM     ");
+		System.out.println("      4- Cadastrar-se      ");
+		System.out.println("      5- Fechar Programa      ");
+		int operacao = leitor.nextInt();
+		switch (operacao) {
+        case 5:System.exit(0);
+            break;
+        case 4: Cliente cadastrar = new Cliente(); cadastrar.cadastro();
+            break;      
+       case 3:Administrador adm = new Administrador(); adm.Admin();
+            break;       
+        case 2:Funcionario func = new Funcionario(); func.menufunc();
+            break;
+            
+       case 1: Cliente c1 = new Cliente();
+       Logcliente login = new Logcliente(); login.logincliente ();
+       login.teste();
+            break;
+    }
+	    
+	    
+	    
+	    
+	}
+}

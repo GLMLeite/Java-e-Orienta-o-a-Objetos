@@ -1,0 +1,68 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Produto {
+	public String id;
+	public String nomeproduto, descricao, cpfverify;
+	public Cliente destinatario;
+	static Scanner leitor = new Scanner(System.in);
+	public static ArrayList<Produto> estoques = new ArrayList<>();
+
+//	public static Produto CadEstoque() {
+//		Produto prod = new Produto();
+//		Produto prod2 = new Produto();
+//		Produto prod3 = new Produto();
+//
+//		prod.id = "7fu869e3-6590-4ee9-bfd0-397a29069f17";
+//		prod.nomeproduto = "Bola de Futebol";
+//		prod.descricao = "Feita de Couro, marca: Nike";
+//
+//		prod2.id = "8ca869e3-6590-4ee9-bfd0-397a29069f17";
+//		prod2.nomeproduto = "Caneta";
+//
+//		prod2.descricao = "Azul, feita por: BIC";
+//
+//		prod3.id = "ca62b0412-f036-442b-9eb8-0009dc368335";
+//		prod3.nomeproduto = "Caneca";
+//
+//		prod3.descricao = "Feita de cerâmica, feita por : canecas personalizaveis";
+//
+//		estoques.add(prod);
+//		estoques.add(prod2);
+//		estoques.add(prod3);
+//		return prod;
+	// }
+
+	public static void registroprod() {
+		System.out.println("Digite o email do destinatario: ");
+		String destinatarioemail;
+	
+		destinatarioemail = leitor.nextLine();
+		for (int i = 0; i < Cliente.database.size(); i++) {
+			if (destinatarioemail.equals(Cliente.database.get(i).email)) {
+				Produto prod = new Produto();
+				System.out.println("Digite o  CPF do cliente: ");
+				prod.cpfverify = leitor.nextLine();
+				System.out.println("Digite codigo produto: ");
+				prod.id = leitor.nextLine();
+
+				System.out.println("Digite nome do produto: ");
+				prod.nomeproduto = leitor.nextLine();
+
+				System.out.println("Digite uma descrição para o produto: ");
+				prod.descricao = leitor.nextLine();
+
+				prod.destinatario = Cliente.database.get(i);
+				estoques.add(prod);
+				Cliente.database.get(i).produto = prod;
+
+				System.out.println("Produto: " + Cliente.database.get(i).produto.nomeproduto + ", ID: "
+						+ Cliente.database.get(i).produto.id);
+				System.out.println("Destnatario: " + Cliente.database.get(i).email);
+			}
+
+		}
+
+	}
+
+}

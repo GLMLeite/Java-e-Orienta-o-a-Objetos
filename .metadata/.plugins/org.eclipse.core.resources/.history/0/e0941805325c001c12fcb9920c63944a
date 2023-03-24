@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static void main(String[] args){//identifica onde inicia
+	Administrador.cad();
+	Menu a = new Menu();
+		a.menu1();
+		
+	}
+	
+}
